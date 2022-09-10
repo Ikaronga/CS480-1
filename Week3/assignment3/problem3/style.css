@@ -1,0 +1,12 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+div {
+    padding: 20px;
+}
+#serif_label {
+font-family: serif;
+}
+#sans_serif_label {
+font-family: sans-serif;
+}
