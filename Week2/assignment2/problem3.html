@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jan 1undays between 2000 and 2021</title>
+</head>
+
+<body>
+    <p id="dates"></p>
+    <script>
+        for (var year = 2000; year <= 2021; year++) {
+            var d = new Date(year, 0, 1);
+            if (d.getDay() === 0)
+                console.log("January 1st is a Sunday in " + year);
+        }
+        document.getElementById("dates").innerHTML = "Check logs/console! :)";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+
+<head>
+    <title>Math Table</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        var table = document.createElement('table'), tr, td, row, cell;
+        for (row = 0; row < 7; row++) {
+            tr = document.createElement('tr');
+            if (row == 0) {
+                tr.classList.add('firstRow');
+            }
+
+            for (cell = 0; cell < 4; cell++) {
+                td = document.createElement('td');
+                tr.appendChild(td);
+                if (row == 0) {
+                    if (cell == 0) { td.innerHTML = "N" }
+                    else {
+                        td.innerHTML = 10 ** cell + "*N";
+                    }
+                }
+                else { td.innerHTML = row * 10 ** cell; }
+            }
+            table.appendChild(tr);
+        }
+        document.getElementById('container').appendChild(table);
+    </script>
+</body>
+
+</html>

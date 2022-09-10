@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Second number</title>
+</head>
+
+<body>
+    <h2>Problem 1</h2>
+    <p id="numberResult"></p>
+    <p id="resultArray"></p>
+    </p>
+
+    <script>
+        var userInt = prompt("How many numbers do you want in your list? (Whole number)");
+        var n = parseInt(userInt);
+        const inputList = [];
+        for (var i = 0; i < n; i++) {
+            var arrayInt = prompt("Number" + (i + 1))
+            var arrayInput = parseInt(arrayInt);
+            inputList.push(arrayInput);
+        }
+        inputList.sort(function (a, b) { return a - b });
+        var secondNumber = inputList[1];
+        var result = "The second smallest number in your list is " + secondNumber;
+
+        document.getElementById("numberResult").innerHTML = result;
+        document.getElementById("resultArray").innerHTML = inputList;
+
+    </script>
+</body>
+
+</html>

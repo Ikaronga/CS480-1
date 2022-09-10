@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Current Date</title>
+</head>
+
+<body>
+    <p id="todaysDate"></p>
+    <script>
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const d = new Date();
+        let day = days[d.getDay()];
+        let totalHour = d.getHours();
+        let minute = d.getMinutes();
+        let second = d.getSeconds();
+        var hour = "";
+        if (totalHour > 12) {
+            var hour = totalHour - 12 + " PM";
+        }
+        else {
+            var hour = totalHour + " AM";
+        }
+
+        document.getElementById("todaysDate").innerHTML = "Today is : " + day + ". Current time is : " + hour + " : " + minute + " : " + second;
+    </script>
+</body>
+
+</html>
