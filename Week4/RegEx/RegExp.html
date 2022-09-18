@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0186)https://blackboard.edgewood.edu/bbcswebdav/pid-1093413-dt-content-rid-9017615_1/courses/CS-480-001-%2DFall-2022/CS-480-001-%2DFall-2021_ImportedContent_20210818113152/RegExp_Partial.html -->
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>RegExp</title>
+	<style>
+		.error {
+			color: red;
+		}
+
+		div {
+			background-color: beige;
+			border-color: darkcyan;
+			border-style: solid;
+			text-align: center;
+			padding: 1.5em;
+			margin: 10%;
+		}
+	</style>
+	<script>
+		function checkName() {
+			var RegExp = /[a-zA-z\-]+\s[a-zA-Z\-]+/;
+			var nameInput = document.getElementById("fullName").value;
+			var errorSpan = document.getElementById("nameError");
+			if (!RegExp.test(nameInput)) {
+				errorSpan.innerHTML = "Error. Input incorrect.";
+			}
+			else {
+				errorSpan.innerHTML = "";
+			}
+		}
+	</script>
+	<style type="text/css"></style>
+</head>
+
+<body>
+	<div>
+
+		<h1>Sample Solution for two of the input fields (using regular expressions)</h1>
+		<form>
+
+			<label>Full Name: </label>
+			<input type="text" id="fullName" name="fullName" onkeydown="checkName()">
+			<span class="error" id="nameError"></span>
+			<p></p>
+
+			<label>Date of Birth</label>
+			<input type="text" name="birthdate" id="birthdate" placeholder="MM-DD-YYYY"
+				pattern="[0-1][0-9]\-[0-3][0-9]\-[1-2][0-9]{3}">
+			<span class="error" id="birthdateError"></span>
+			<p></p>
+
+			<input type="submit">
+
+		</form>
+	</div>
+
+
+</body>
+
+</html>

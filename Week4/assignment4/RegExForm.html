@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Form Check</title>
+</head>
+
+<body>
+    <div id="top_of_page">
+        <h1>Information Form</h1>
+        <p>Fill out the following information until all prompts are completed.</p>
+    </div>
+    <div>
+        <form>
+            <label>Full Name (first and last):</label><br>
+            <input type="text" id="fullName" name="fullName" placeholder="John Smith" onkeydown="checkName()">
+            <span class="error" id="fullNameError" placeholder="John Smith"></span><br><br>
+
+            <label>Password:</label><br>
+            <input type="text" id="password" name="password" placeholder="Minimum 7 characters" onkeydown="checkPassword()">
+            <span class="error" id="passwordError"></span><br><br>
+            
+
+            <label>Street Address:</label><br>
+            <input type="text" id="streetAddress" name="streetAddress" placeholder="1234 Cherry Lane" onkeydown="checkAddress()">
+            <span class="error" id="addressError"></span><br><br>
+
+            <label>Zip Code:</label><br>
+            <input type="text" id="zipCode" name="zipCode" placeholder="24680" onkeydown="checkZip()">
+            <span class="error" id="zipError"></span><br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="MM-DD-YYYY" onkeydown="checkBirth()">
+            <span class="error" id="birthError"></span><br><br>
+            
+            <label>Credit Card:</label><br>
+            <input type="text" id="creditCard" name="creditCard" placeholder="1234-5678-9012-3456" onkeydown="checkCard()">
+            <span class="error" id="cardError"></span><br><br>
+
+            <input type="submit" value="Submit" id="submitButton" name="submitButton">
+        </form>
+    </div>
+
+</body>
+<script src="script.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</html>
