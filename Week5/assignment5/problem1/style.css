@@ -1,0 +1,43 @@
+html {
+    font-family: sans-serif;
+    background-color: #95DECA;
+}
+
+.inputP {
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+#top_of_page {
+    padding: 20px;
+    display: block;
+    background-color: #77917F;
+    color: white;
+    outline-width: 4px;
+    outline-style: auto;
+    outline-color: white;
+}
+
+.button {
+    width: 100%;
+    background-color: #76DE94;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline-width: 4px;
+    outline-style: auto;
+    outline-color: white;
+}
+
+.button:hover {
+    background-color: #5A9182;
+    color: white;
+    outline-width: 4px;
+    outline-style: auto;
+    outline-color: white;
+}
