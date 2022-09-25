@@ -10,6 +10,7 @@ html {
     text-align: center;
 }
 
+/* This is the element being modified */
 #top_of_page {
     width: 400px;
     height: 150px;
