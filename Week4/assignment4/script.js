@@ -39,7 +39,7 @@ function checkAddress() {
 }
 
 function checkZip() {
-    var ZipExp = /\d{5,}/;
+    var ZipExp = /\d{5,}/;// Since we have a standard zip code in the US I would not leave the max value as black because this means I can enter as many digits as I want as long as they are at least 5. I would put max as 5 or if you want the full zip then 10 inclusing the dash
     var zipInput = document.getElementById("zipCode").value;
     var errorSpan = document.getElementById("zipError");
     if (!ZipExp.test(zipInput)) {
@@ -51,7 +51,7 @@ function checkZip() {
 }
 
 function checkBirth() {
-    var BirthExp = /[0-1][0-9]\-[0-3][0-9]\-[1-2]([0-9]{3})/;
+    var BirthExp = /[0-1][0-9]\-[0-3][0-9]\-[1-2]([0-9]{3})/;//For the general layout and some working validation I will give you full points. There is more complex modifications to not match dates like 02-32-1999.
     var birthInput = document.getElementById("dateOfBirth").value;
     var errorSpan = document.getElementById("birthError");
     if (!BirthExp.test(birthInput)) {
